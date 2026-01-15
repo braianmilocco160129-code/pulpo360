@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulpo 360 - Marketing y Tecnología</title>
+  <meta name="description" content="Soluciones digitales que impulsan tu negocio. Desarrollo web, apps móviles, IA y marketing digital.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="nav-logo">
+            <img src="image.png" alt="Pulpo 360" class="logo">
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-desktop">
+            <button onclick="scrollToSection('servicios')" class="nav-link">Servicios</button>
+            <button onclick="scrollToSection('tecnologia')" class="nav-link">Tecnología</button>
+            <button onclick="scrollToSection('casos')" class="nav-link">Casos de Éxito</button>
+            <button onclick="scrollToSection('contacto')" class="btn btn-primary">Hablemos</button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="nav-mobile" id="mobileMenu">
+        <div class="nav-mobile-content">
+          <button onclick="scrollToSection('servicios')" class="nav-mobile-link">Servicios</button>
+          <button onclick="scrollToSection('tecnologia')" class="nav-mobile-link">Tecnología</button>
+          <button onclick="scrollToSection('casos')" class="nav-mobile-link">Casos de Éxito</button>
+          <button onclick="scrollToSection('contacto')" class="btn btn-primary btn-full">Hablemos</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Impulsa Tu <span class="text-lime">Negocio</span> Al Siguiente Nivel
+          </h1>
+          <p class="hero-subtitle">
+            Transformamos ideas en resultados medibles
+          </p>
+          <div class="hero-buttons">
+            <button onclick="scrollToSection('servicios')" class="btn btn-lime btn-large">
+              <span>Ver Servicios</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <button onclick="scrollToSection('casos')" class="btn btn-outline btn-large">
+              Casos de Éxito
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="pulpo-inverted.png" alt="Pulpo 360" class="hero-logo-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section - Marketing -->
+    <section id="servicios" class="section section-gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Estrategias que <span class="text-purple">Generan Resultados</span></h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card card-hover">
+            <div class="card-icon bg-purple">
+              <img src="iconos/marketing.svg" alt="Publicidad Digital" width="40" height="40">
+            </div>
+            <h3 class="card-title">Publicidad Digital</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Google Ads y Meta Ads</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>ROI medible y optimización continua</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-lime">
+              <img src="iconos/design.svg" alt="Diseño y Branding" width="40" height="40">
+            </div>
+            <h3 class="card-title">Diseño y Branding</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Identidad de marca completa</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Contenido visual impactante</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-purple">
+              <img src="iconos/planing.svg" alt="Estrategia Digital" width="40" height="40">
+            </div>
+            <h3 class="card-title">Estrategia Digital</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Análisis de mercado profundo</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Social media management</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-lime">
+              <img src="iconos/seo.svg" alt="Contenido y SEO" width="40" height="40">
+            </div>
+            <h3 class="card-title">Contenido y SEO</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Optimización para buscadores</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Estrategia de contenidos efectiva</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tecnologia" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Desarrollo Tecnológico <span class="text-lime">a Medida</span></h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card card-hover">
+            <div class="card-icon bg-lime">
+              <img src="iconos/agents.svg" alt="Inteligencia Artificial" width="40" height="40">
+            </div>
+            <h3 class="card-title">Inteligencia Artificial</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Chatbots inteligentes y automatización</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Machine learning avanzado</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-purple">
+              <img src="iconos/web.svg" alt="Plataformas Web" width="40" height="40">
+            </div>
+            <h3 class="card-title">Plataformas Web</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Arquitectura escalable y robusta</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>E-commerce y sistemas personalizados</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-lime">
+              <img src="iconos/mobile.svg" alt="Apps Empresariales" width="40" height="40">
+            </div>
+            <h3 class="card-title">Apps Empresariales</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>iOS y Android nativos</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Sincronización y dashboards avanzados</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-hover">
+            <div class="card-icon bg-purple">
+              <img src="iconos/datos.svg" alt="Datos y BI" width="40" height="40">
+            </div>
+            <h3 class="card-title">Datos y BI</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Análisis de datos avanzado</span>
+              </li>
+              <li class="feature-item">
+                <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Visualización y Business Intelligence</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Section - Carousel -->
+    <section id="casos" class="section section-gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Resultados que <span class="text-purple">Hablan por Sí Solos</span></h2>
+        </div>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-container">
+            <div class="carousel" id="carousel">
+              <!-- Slides will be dynamically generated by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Dots Indicator -->
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+      <div class="container">
+        <div class="team-grid">
+          <div class="team-content">
+            <h2 class="section-title">Un Equipo <span class="text-purple">Interdisciplinario</span> e Innovador</h2>
+
+            <div class="team-features">
+              <div class="team-feature">
+                <div class="team-icon bg-purple">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="team-feature-title">Interdisciplinario</h3>
+                  <p class="team-feature-text">Expertos trabajando juntos</p>
+                </div>
+              </div>
+
+              <div class="team-feature">
+                <div class="team-icon bg-lime">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="team-feature-title">Innovador</h3>
+                  <p class="team-feature-text">A la vanguardia de las tendencias digitales</p>
+                </div>
+              </div>
+
+              <div class="team-feature">
+                <div class="team-icon bg-purple">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="team-feature-title">Predispuesto</h3>
+                  <p class="team-feature-text">Comprometidos con tu éxito</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-visual">
+            <div class="team-visual-blur"></div>
+            <div class="team-visual-content">
+              <div class="team-grid-icons">
+                <div class="team-grid-icon">
+                  <img src="1.png" alt="Desarrollo" class="team-image">
+                </div>
+                <div class="team-grid-icon">
+                  <img src="2.png" alt="Análisis" class="team-image">
+                </div>
+                <div class="team-grid-icon">
+                  <img src="3.png" alt="Soporte" class="team-image">
+                </div>
+                <div class="team-grid-icon">
+                  <img src="4.png" alt="Datos" class="team-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="hero-bg"></div>
+      <div class="container cta-content">
+        <h2 class="cta-title">¿Listo para Transformar tu <span class="text-lime">Presencia Digital</span>?</h2>
+        <div class="cta-buttons">
+          <button onclick="scrollToSection('contacto')" class="btn btn-lime btn-large">
+            <span>Solicitar Cotización</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          <button onclick="scrollToSection('casos')" class="btn btn-outline btn-large">
+            Ver Portafolio
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Hablemos de tu <span class="text-purple">Próximo Proyecto</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column - Contact Info -->
+          <div class="contact-info">
+            <a href="mailto:hola@pulpo360.com" class="contact-card contact-card-purple">
+              <div class="contact-icon bg-purple-solid">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value text-purple">hola@pulpo360.com</div>
+              </div>
+            </a>
+
+            <a href="tel:+541112345678" class="contact-card contact-card-lime">
+              <div class="contact-icon bg-lime-solid">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Teléfono</div>
+                <div class="contact-value contact-value-lime">+54 11 1234-5678</div>
+              </div>
+            </a>
+
+            <div class="contact-card contact-card-purple">
+              <div class="contact-icon bg-purple-solid">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Ubicación</div>
+                <div class="contact-value">Buenos Aires, Argentina</div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column - Contact Form -->
+          <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" id="name" name="name" required placeholder="Tu nombre" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="tu@email.com" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service" class="form-label">Servicio de Interés</label>
+                <select id="service" name="service" required class="form-input">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="desarrollo-web">Desarrollo Web</option>
+                  <option value="apps-moviles">Apps Móviles</option>
+                  <option value="diseno-grafico">Diseño Gráfico</option>
+                  <option value="marketing-digital">Marketing Digital</option>
+                  <option value="inteligencia-artificial">Inteligencia Artificial</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" required rows="5" placeholder="Cuéntanos sobre tu proyecto..." class="form-input form-textarea"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-purple btn-full">
+                <span>Enviar Mensaje</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="image.png" alt="Pulpo 360" class="footer-logo">
+            <p class="footer-text">Soluciones digitales que impulsan tu negocio</p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">Servicios</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Desarrollo Web</a></li>
+              <li><a href="#" class="footer-link">Apps Móviles</a></li>
+              <li><a href="#" class="footer-link">Diseño Gráfico</a></li>
+              <li><a href="#" class="footer-link">Marketing Digital</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">Empresa</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Nosotros</a></li>
+              <li><a href="#" class="footer-link">Portfolio</a></li>
+              <li><a href="#" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2025 Pulpo 360. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <span class="whatsapp-tooltip">Chateá con nosotros</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
