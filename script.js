@@ -11,7 +11,7 @@ const cases = [
     metric: '+280% Ventas B2B',
     duration: '5 meses',
     icon: 'trending-up',
-    image: 'sistemas/lucca.png',
+    image: 'lucca.png',
     color: 'lime',
     link: null
   },
@@ -23,7 +23,7 @@ const cases = [
     metric: '+200% Usuarios',
     duration: '3 meses',
     icon: 'smartphone',
-    image: 'sistemas/scrapy.png',
+    image: 'scrapy.png',
     color: 'purple',
     link: null
   },
@@ -35,7 +35,7 @@ const cases = [
     metric: '+300 Leads B2B',
     duration: '4 meses',
     icon: 'target',
-    image: 'sistemas/briqueteeado.png',
+    image: 'briqueteeado.png',
     color: 'lime',
     link: null
   },
@@ -47,7 +47,7 @@ const cases = [
     metric: 'Sistema Completo',
     duration: null,
     icon: 'globe',
-    image: 'sistemas/mistral.png',
+    image: 'mistral.png',
     color: 'purple',
     link: 'https://www.espaciomistral.es/'
   },
@@ -59,7 +59,7 @@ const cases = [
     metric: 'IA + Análisis',
     duration: null,
     icon: 'layout',
-    image: 'sistemas/ecosnapshot.png',
+    image: 'ecosnapshot.png',
     color: 'lime',
     link: 'https://sesostenible.com.ar/'
   },
@@ -71,7 +71,7 @@ const cases = [
     metric: 'Dashboard Completo',
     duration: null,
     icon: 'bar-chart',
-    image: 'sistemas/zoom.png',
+    image: 'zoom.png',
     color: 'purple',
     link: null
   }
