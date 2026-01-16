@@ -1,3 +1,21 @@
+// ========================================
+// CONFIGURACIÓN DE DATOS DE CONTACTO
+// ========================================
+// Actualiza estos valores cuando tengas los datos reales
+const CONTACT_DATA = {
+  email: 'hola@pulpo360.com',
+  phone: '+5491112345678',
+  phoneFormatted: '+54 11 1234-5678',
+  location: 'Buenos Aires, Argentina',
+  whatsappNumber: '5491112345678',
+  whatsappMessage: 'Hola! Me interesa conocer más sobre sus servicios',
+  social: {
+    instagram: 'https://instagram.com/pulpo360',
+    facebook: 'https://facebook.com/pulpo360',
+    linkedin: 'https://linkedin.com/company/pulpo360'
+  }
+};
+
 let mobileMenuOpen = false;
 let currentSlide = 0;
 let carouselInterval;
@@ -433,7 +451,60 @@ function observeElements() {
   }
 }
 
+// ========================================
+// ACTUALIZAR DATOS DE CONTACTO EN EL DOM
+// ========================================
+function updateContactData() {
+  // Email
+  const emailCard = document.getElementById('contact-email-card');
+  const emailText = document.getElementById('contact-email-text');
+  const footerEmail = document.getElementById('footer-email');
+  if (emailCard) emailCard.href = `mailto:${CONTACT_DATA.email}`;
+  if (emailText) emailText.textContent = CONTACT_DATA.email;
+  if (footerEmail) footerEmail.href = `mailto:${CONTACT_DATA.email}`;
+
+  // Teléfono
+  const phoneCard = document.getElementById('contact-phone-card');
+  const phoneText = document.getElementById('contact-phone-text');
+  const footerPhone = document.getElementById('footer-phone');
+  if (phoneCard) phoneCard.href = `tel:${CONTACT_DATA.phone}`;
+  if (phoneText) phoneText.textContent = CONTACT_DATA.phoneFormatted;
+  if (footerPhone) footerPhone.href = `tel:${CONTACT_DATA.phone}`;
+
+  // Ubicación
+  const locationText = document.getElementById('contact-location-text');
+  const footerLocation = document.getElementById('footer-location');
+  if (locationText) locationText.textContent = CONTACT_DATA.location;
+  if (footerLocation) footerLocation.textContent = CONTACT_DATA.location;
+
+  // WhatsApp
+  const whatsappButton = document.getElementById('whatsapp-button');
+  if (whatsappButton) {
+    const whatsappUrl = `https://wa.me/${CONTACT_DATA.whatsappNumber}?text=${encodeURIComponent(CONTACT_DATA.whatsappMessage)}`;
+    whatsappButton.href = whatsappUrl;
+  }
+
+  // Redes sociales - Contacto
+  const contactInstagram = document.getElementById('contact-instagram');
+  const contactFacebook = document.getElementById('contact-facebook');
+  const contactLinkedin = document.getElementById('contact-linkedin');
+  if (contactInstagram) contactInstagram.href = CONTACT_DATA.social.instagram;
+  if (contactFacebook) contactFacebook.href = CONTACT_DATA.social.facebook;
+  if (contactLinkedin) contactLinkedin.href = CONTACT_DATA.social.linkedin;
+
+  // Redes sociales - Footer
+  const footerInstagram = document.getElementById('footer-instagram');
+  const footerFacebook = document.getElementById('footer-facebook');
+  const footerLinkedin = document.getElementById('footer-linkedin');
+  if (footerInstagram) footerInstagram.href = CONTACT_DATA.social.instagram;
+  if (footerFacebook) footerFacebook.href = CONTACT_DATA.social.facebook;
+  if (footerLinkedin) footerLinkedin.href = CONTACT_DATA.social.linkedin;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Actualizar datos de contacto al cargar la página
+  updateContactData();
+
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
