@@ -360,6 +360,42 @@ body {
   }
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-badges {
+    justify-content: flex-start;
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(163, 230, 53, 0.15);
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  border-radius: 2rem;
+  color: var(--lime-100);
+  font-size: 0.875rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+
+.hero-badge:hover {
+  background: rgba(163, 230, 53, 0.25);
+  border-color: rgba(163, 230, 53, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 230, 53, 0.3);
+}
+
 .hero-buttons {
   display: flex;
   flex-direction: column;
@@ -376,6 +412,223 @@ body {
 @media (min-width: 1024px) {
   .hero-buttons {
     justify-content: flex-start;
+  }
+}
+
+/* Burbujas flotantes */
+.floating-bubbles {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+  background: rgba(163, 230, 53, 0.2);
+  border-color: rgba(163, 230, 53, 0.4);
+  box-shadow: 0 12px 40px rgba(163, 230, 53, 0.3);
+}
+
+.bubble-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.bubble-icon {
+  color: var(--lime-400);
+  stroke-width: 2.5;
+}
+
+.bubble-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Tamaños y posiciones de burbujas */
+.bubble-1 {
+  width: 140px;
+  height: 140px;
+  top: 10%;
+  left: 15%;
+  animation: float-bubble-1 8s ease-in-out infinite;
+}
+
+.bubble-2 {
+  width: 120px;
+  height: 120px;
+  top: 45%;
+  left: 5%;
+  animation: float-bubble-2 7s ease-in-out infinite;
+}
+
+.bubble-3 {
+  width: 100px;
+  height: 100px;
+  top: 70%;
+  left: 25%;
+  animation: float-bubble-3 9s ease-in-out infinite;
+}
+
+.bubble-4 {
+  width: 130px;
+  height: 130px;
+  top: 15%;
+  right: 15%;
+  animation: float-bubble-4 6.5s ease-in-out infinite;
+}
+
+.bubble-5 {
+  width: 110px;
+  height: 110px;
+  top: 50%;
+  right: 10%;
+  animation: float-bubble-5 8.5s ease-in-out infinite;
+}
+
+.bubble-6 {
+  width: 95px;
+  height: 95px;
+  top: 75%;
+  right: 30%;
+  animation: float-bubble-6 7.5s ease-in-out infinite;
+}
+
+.bubble-7 {
+  width: 105px;
+  height: 105px;
+  top: 32%;
+  left: 35%;
+  animation: float-bubble-7 8.2s ease-in-out infinite;
+}
+
+.bubble-8 {
+  width: 115px;
+  height: 115px;
+  top: 55%;
+  right: 35%;
+  animation: float-bubble-8 7.8s ease-in-out infinite;
+}
+
+/* Animaciones de burbujas */
+@keyframes float-bubble-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(10px, -15px) scale(1.05);
+  }
+  50% {
+    transform: translate(-5px, -25px) scale(1);
+  }
+  75% {
+    transform: translate(15px, -10px) scale(0.95);
+  }
+}
+
+@keyframes float-bubble-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-15px, 20px) scale(1.08);
+  }
+  66% {
+    transform: translate(10px, 10px) scale(0.95);
+  }
+}
+
+@keyframes float-bubble-3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translate(20px, -10px) scale(1.1);
+  }
+  80% {
+    transform: translate(-10px, 5px) scale(0.92);
+  }
+}
+
+@keyframes float-bubble-4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  30% {
+    transform: translate(-12px, 18px) scale(1.06);
+  }
+  60% {
+    transform: translate(8px, -12px) scale(0.96);
+  }
+}
+
+@keyframes float-bubble-5 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  35% {
+    transform: translate(18px, -20px) scale(1.09);
+  }
+  70% {
+    transform: translate(-8px, 15px) scale(0.94);
+  }
+}
+
+@keyframes float-bubble-6 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  28% {
+    transform: translate(-20px, -8px) scale(1.07);
+  }
+  65% {
+    transform: translate(12px, 18px) scale(0.97);
+  }
+}
+
+@keyframes float-bubble-7 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  32% {
+    transform: translate(15px, -18px) scale(1.06);
+  }
+  68% {
+    transform: translate(-10px, 12px) scale(0.95);
+  }
+}
+
+@keyframes float-bubble-8 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  38% {
+    transform: translate(-18px, 15px) scale(1.08);
+  }
+  72% {
+    transform: translate(14px, -10px) scale(0.96);
   }
 }
 

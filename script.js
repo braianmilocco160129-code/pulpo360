@@ -23,6 +23,18 @@ let carouselInterval;
 const cases = [
   {
     id: 1,
+    title: 'Agente IA para Broker',
+    description: 'Chatbot con WhatsApp que conecta con apps externas usando lenguaje natural para gestión de seguros.',
+    category: 'Agente IA + WhatsApp',
+    metric: 'IA Conversacional',
+    duration: null,
+    icon: 'message-circle',
+    image: 'broker.jpeg',
+    color: 'purple',
+    link: null
+  },
+  {
+    id: 2,
     title: 'Lucca Objetos',
     description: 'Tienda online especializada en lámparas y objetos de diseño.',
     category: 'E-commerce',
@@ -34,7 +46,7 @@ const cases = [
     link: null
   },
   {
-    id: 2,
+    id: 3,
     title: 'Scrapy App',
     description: 'App móvil para optimizar el reciclaje industrial y urbano.',
     category: 'App Móvil',
@@ -45,8 +57,20 @@ const cases = [
     color: 'purple',
     link: null
   },
+    {
+    id: 4,
+    title: 'Chatbot con Derivación',
+    description: 'Sistema de atención al público con IA que valida consultas y deriva a humanos cuando es necesario.',
+    category: 'Chatbot IA',
+    metric: 'IA + Humanos',
+    duration: null,
+    icon: 'users',
+    image: 'conversaciones.png',
+    color: 'lime',
+    link: null
+  },
   {
-    id: 3,
+    id: 5,
     title: 'Briqueteado',
     description: 'Estrategia digital completa para empresa industrial.',
     category: 'Marketing Digital',
@@ -58,7 +82,7 @@ const cases = [
     link: null
   },
   {
-    id: 4,
+    id: 6,
     title: 'Espacio Mistral',
     description: 'Plataforma web con sistema de reservas y gestión de eventos.',
     category: 'Plataforma Web',
@@ -70,7 +94,7 @@ const cases = [
     link: 'https://www.espaciomistral.es/'
   },
   {
-    id: 5,
+    id: 7,
     title: 'SeSostenible',
     description: 'App web para medición de impacto ambiental con IA.',
     category: 'Web App',
@@ -82,7 +106,7 @@ const cases = [
     link: 'https://sesostenible.com.ar/'
   },
   {
-    id: 6,
+    id: 8,
     title: 'Bar Zoom',
     description: 'Plataforma web completa con tablero de datos e insights de negocio.',
     category: 'Web + BI',
@@ -96,6 +120,8 @@ const cases = [
 ];
 
 const icons = {
+  'message-circle': '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>',
+  'users': '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>',
   'trending-up': '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>',
   'smartphone': '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>',
   'target': '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>',
